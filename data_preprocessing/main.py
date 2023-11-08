@@ -2,7 +2,7 @@ import pandas as pd
 import re
 import json
 
-data = pd.read_csv("/Users/lauraferretti/Desktop/Tesi/docUfficiale.csv")
+data = pd.read_csv("/pathdocumento.csv")
 data_frame = pd.DataFrame(data, columns=['conversation_id', 'message_id', 'detailed_message_type', 'message_parts', 'created_time', 'actor_id', 'actor_type' ])
 pattern_email = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
 pattern_numTel = r"\b(?:\+39)?\s?(?:(?:(?:0|\(?\d{1,4}\)?)\s?\d{2,5}[\s\./]?\d{3}[\s\./]?\d{3,4})|(?:(?:\d{3}[\s\./]?){3,4}\d{2,3})|(?:(?:\d{1,4}[\s-])?\d{5}))\b"
@@ -191,7 +191,7 @@ def delete_rows_pattern(pattern):
 #modify_message_parts()
 #delete_rows_message("messaggio non disponibile")
 #sort_dataframe()
-#data_frame.to_csv('/Users/lauraferretti/Desktop/Tesi/docUfficiale.csv', index=False )
+#data_frame.to_csv('/pathDocumento.csv', index=False )
 #merge_rows()
 #delete_entire_conversation(delete_rows_type('NORMAL'))
 #num_trovato = re.findall(r, column['message_parts'])
