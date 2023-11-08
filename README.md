@@ -14,7 +14,7 @@ All'interno della directory **data_preprocessing** è presente il codice python,
 
 ### Creazione file JSONL
 
-Il passo successivo è consistito nel creare un file JSONL con coppie prompt-completion, dove le domande dei clienti erano i prompt e le risposte degli agenti le completion. 
+Il passo successivo è consistito nel creare un file JSONL con coppie prompt-completion, le domande dei clienti erano corrispondenti ai prompt e le risposte degli agenti alle completion. 
 
 All'interno della directory **csv_to_JSONL** è presente il codice python utilizzato per realizzare il file JSONL a partire dal file csv e il codice utilizzato per la suddivisione del dataset in training set e testing set.
 
@@ -28,7 +28,7 @@ Questa knowledge base fornisce al chatbot un contesto per generare risposte più
 Inoltre, è stata realizzata un'interfaccia grafica, tramite l'uso di Gradio, per l'interazione degli utenti con il chatbot, rendendo l'esperienza più intuitiva e user-friendly.
  
 ## Uso del chatbot
-All'interno del file .. è riportato il codice per utilizzare il chatbot creato. Prima dell'utilizzo bisogna creare, all'interno della directory contenente lo script, una cartella docs contenente dei file in formato .txt con informazioni inerente alle strutture ricettive desiderate. Questi documenti costituiranno la knowledge base a cui il chatbot attingerà per rispondere alle domande degli utenti.
+All'interno del file **chatbot_tesi.py** è riportato il codice per utilizzare il chatbot creato. Prima dell'utilizzo bisogna creare, all'interno della directory contenente lo script, una cartella docs contenente dei file in formato .txt con informazioni inerenti alle strutture ricettive desiderate. Questi documenti costituiranno la knowledge base a cui il chatbot attingerà per rispondere alle domande degli utenti.
 
 ## Autore
 Laura Ferretti
