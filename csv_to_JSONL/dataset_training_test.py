@@ -3,7 +3,7 @@ import random
 
 #usato per estrarre le domande per fare training e test, il file training set lo uso per fare fine tuning
 # Apri il file in modalità di lettura
-with open("file_json_26-05_prepared_prepared.jsonl", 'r') as file:
+with open("file.jsonl", 'r') as file:
     # Leggi tutte le righe del file
     righe = file.readlines()
 
@@ -25,7 +25,7 @@ else:
         file_modificato.writelines(righe_restanti)
 
     # Salva le righe estratte in un nuovo file
-    with open('test_set1.jsonl', 'w') as nuovo_file:
+    with open('test_set.jsonl', 'w') as nuovo_file:
         nuovo_file.writelines(righe_estratte)
 
     print("Estrazione completata. Le righe estratte sono state salvate in 'righe_estratte.txt'. Le righe estratte sono state rimosse dal file originale.")
