@@ -1,18 +1,28 @@
-# Chatbot-per-agenzia-viaggio
-Il seguente chatbot è stato realizzato come progetto di tesi triennale per il corso di laurea Ingegneria Informatica e dell'automazione. 
-Lo scopo del sistema qui progettatto è quello di rispondere alle domande dell'utente in maniera corrretta e appropriata. Per la realizzazione è stato utilizzato un dataset contenente vari scambi messaggistici tra agenti ed utenti (per motivi di privacy non è stato possibile inserire il dataset).
+# Chatbot_per_agenzia_viaggio
+Questo chatbot è stato sviluppato come parte di un progetto di tesi triennale per il corso di laurea in Ingegneria Informatica e dell'Automazione. L'obiettivo principale di questo sistema è fornire risposte accurate ed appropriate alle domande degli utenti sul dominio specifico. Il chatbot è stato realizzato effettuando in una prima fase il fine tuning sul modello base ADA di GPT3 e successivamente è stata passata una knowledge base tramite l'uso di GPT Index. Per garantire la privacy, non è possibile fornire il dataset originale con cui è stato effettuato il fine tuning.
 
-## directory data_preprocessing
-All'interno della directory data_preprocessing è contenuto il codice utilizzato per il preprocessing dei dati, con lo scopo di eliminare dati sensibili (corrispondenti a determinati pattern) e di rendere i dati conformi con quanto richiesto da Openai per l'uso delle API per effettuare fine tuning. 
+## Processo realizzativo
 
-## directory csv_to_JSONL
-All'interno della directory csv_to_JSONL sono contenuti due file: dataset_training_test e main. 
+### Preprocessing dei dati
 
-## main
-All'interno di questo file è contenuto il codice utilizzato per la creazione del file JSONL a partire dal dataset in formato csv al fine di effettuare il fine tuning sul modello base ADA di GPT3.
+Per realizzare il sistema chatbot, innanzitutto è stato effettuato un accurato preprocessing dei dati a disposizione. 
+Il dataset utilizzato è costituito da un file csv contenente i messaggi inviati dagli utenti e le risposte fornite dagli agenti, in più altre informazioni tra cui l'id della conversazione di riferimento e il ruolo del mittente del messaggio (USER/AGENT). 
 
-## dataset_training_test
-All'interno di questo file è presente il codice utilizzato per estrarre il training set e il testing set dal dataset.
+La fase di data preprocessing è stata di cruciale importanza al fine di eliminare tutti i dati sensibili e di ristrutturare il dataset per renderlo conforme con quanto richiesto dall'API di OpenAI.
 
-## chatbot_tesi
-All'interno di questo file è presente il codice per l'uso del chatbot, implementato utilizzando diverse librerie e strumenti, tra cui OpenAI, GPT (Generative Pre-trained Transformer) per la generazione del testo, e Gradio per l'interfaccia utente.
+All'interno della directory **data_preprocessing** è presente il codice python, costituito da varie funzioni, utilizzato per effettuare il preprocessing dei dati.
+
+### Creazione file JSONL
+
+Il passo successivo è consistito nel creare un file JSONL con coppie prompt-completion, dove le domande dei clienti erano i prompt e le risposte degli agenti le completion. 
+La struttura del file ottenuto è quella riportata in figura: 
+
+![Uploading Screenshot 2023-11-08 alle 09.40.38.png…]()
+
+All'interno della directory **csv_to_JSONL** è presente il codice python utilizzato per realizzare il file JSONL a partire dal file csv e il codice utilizzato per la suddivisione del dataset in training set e testing set.
+
+### Realizzazione del fine tuning
+
+Una volta creato il file JSONL e validato è stato effettuato il fine tuning sul modello ADA di GPT3 utilizzando l'API messa a disposizione da OpenAI
+
+### Trasferimento della knowledge base e creazione ddell'interfaccia grafica
