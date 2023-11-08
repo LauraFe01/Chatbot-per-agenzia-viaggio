@@ -15,7 +15,7 @@ def drop_agent(data_frame):
 
     print(data_frame[data_frame[' conversation_id'].map(mask)].index)
     #print(filtered_df)
-    #filtered_df.to_csv('/Users/lauraferretti/Desktop/Tesi/fileGruppiAgentEliminati.csv', index=False)
+    #filtered_df.to_csv('/path/Documento.csv', index=False)
 
 
 def odd_rows(data_frame):
@@ -28,7 +28,7 @@ def odd_rows(data_frame):
     print(odd_counts.index)
     #aggiungo al dataframe solo le conversazioni con un numero pari di righe
     modified_df = data_frame.drop(data_frame[data_frame[' conversation_id'].isin(odd_counts.index)].groupby(' conversation_id').tail(1).index)
-    #modified_df.to_csv('/Users/lauraferretti/Desktop/Tesi/lastRowDeleteOdd.csv', index=False)
+    #modified_df.to_csv('/path/Documento.csv', index=False)
     #print(data_frame[data_frame[' conversation_id'].isin(odd_counts.index)].groupby(' conversation_id').tail(1).index)
 
 def csv_to_dataFrame(file_path):
@@ -73,12 +73,12 @@ def modifyJSONL(fileJSON):
     with open(fileJSON, 'w') as file:
         file.write(contenuto_modificato)
 
-dataF = csv_to_dataFrame("/Users/lauraferretti/Desktop/Tesi/lastRowDeleteOdd.csv")
-#dataF = csv_to_dataFrame("/Users/lauraferretti/Desktop/Tesi/fileGruppiAgentEliminati.csv")     #usato per testare se il file fosse corretto
+dataF = csv_to_dataFrame("/path/Documento.csv")
+#dataF = csv_to_dataFrame("/path/Documento.csv")     #usato per testare se il file fosse corretto
 #odd_rows(dataF)
-#dataF = csv_to_dataFrame("/Users/lauraferretti/Desktop/Tesi/file modificato/test.csv")
+#dataF = csv_to_dataFrame("/path/Documento.csv")
 #drop_agent(dataF)
-dataFrame_to_JSONL(dataF, "file_json_26-05.jsonl")
-modifyJSONL("file_json_26-05.jsonl")
+dataFrame_to_JSONL(dataF, "file.jsonl")
+modifyJSONL("file.jsonl")
 
 
