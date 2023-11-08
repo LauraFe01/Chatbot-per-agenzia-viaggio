@@ -17,7 +17,7 @@ All'interno della directory **data_preprocessing** è presente il codice python,
 Il passo successivo è consistito nel creare un file JSONL con coppie prompt-completion, dove le domande dei clienti erano i prompt e le risposte degli agenti le completion. 
 La struttura del file ottenuto è quella riportata in figura: 
 
-![Struttura file JSONL](struttura file JSONL.png)
+![struttura file JSONL.png]
 
 All'interno della directory **csv_to_JSONL** è presente il codice python utilizzato per realizzare il file JSONL a partire dal file csv e il codice utilizzato per la suddivisione del dataset in training set e testing set.
 
