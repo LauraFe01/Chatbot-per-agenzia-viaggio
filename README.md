@@ -15,9 +15,6 @@ All'interno della directory **data_preprocessing** è presente il codice python,
 ### Creazione file JSONL
 
 Il passo successivo è consistito nel creare un file JSONL con coppie prompt-completion, dove le domande dei clienti erano i prompt e le risposte degli agenti le completion. 
-La struttura del file ottenuto è quella riportata in figura: 
-
-![struttura file JSONL.png]
 
 All'interno della directory **csv_to_JSONL** è presente il codice python utilizzato per realizzare il file JSONL a partire dal file csv e il codice utilizzato per la suddivisione del dataset in training set e testing set.
 
@@ -26,3 +23,5 @@ All'interno della directory **csv_to_JSONL** è presente il codice python utiliz
 Una volta creato il file JSONL e validato è stato effettuato il fine tuning sul modello ADA di GPT3 utilizzando l'API messa a disposizione da OpenAI
 
 ### Trasferimento della knowledge base e creazione ddell'interfaccia grafica
+
+
