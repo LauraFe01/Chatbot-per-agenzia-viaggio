@@ -23,5 +23,13 @@ All'interno della directory **csv_to_JSONL** è presente il codice python utiliz
 Una volta creato il file JSONL e validato è stato effettuato il fine tuning sul modello ADA di GPT3 utilizzando l'API messa a disposizione da OpenAI
 
 ### Trasferimento della knowledge base e creazione ddell'interfaccia grafica
+Il chatbot,infine, è stato dotato di una knowledge base attraverso l'utilizzo di GPT Index.
+Questa knowledge base fornisce al chatbot un contesto per generare risposte più pertinenti e precise. 
+Inoltre, è stata realizzata un'interfaccia grafica, tramite l'uso di Gradio, per l'interazione degli utenti con il chatbot, rendendo l'esperienza più intuitiva e user-friendly.
+ 
+## Uso del chatbot
+All'interno del file .. è riportato il codice per utilizzare il chatbot creato. Prima dell'utilizzo bisogna creare, all'interno della directory contenente lo script, una cartella docs contenente dei file in formato .txt con informazioni inerente alle strutture ricettive desiderate. Questi documenti costituiranno la knowledge base a cui il chatbot attingerà per rispondere alle domande degli utenti.
 
+## Autore
+Laura Ferretti
 
